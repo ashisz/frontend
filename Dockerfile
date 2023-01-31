@@ -10,4 +10,5 @@ RUN npm run build
 # /app/build will have all assets
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
